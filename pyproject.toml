@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "face-recognition-studio"
+version = "1.0.0"
+description = "Session-aware face recognition for Dũng, Duy and Hưng"
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+
+[project.scripts]
+faceid = "faceid.cli:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["faceid*"]
+
+[tool.setuptools.package-data]
+"faceid.web" = ["static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

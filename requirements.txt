@@ -1,0 +1,9 @@
+# Python 3.10–3.12. Torch/torchvision chọn bản tương thích theo pip.
+torch>=2.2,<3
+torchvision>=0.17,<1
+numpy>=1.26,<3
+Pillow>=10.3,<14
+opencv-python-headless>=4.8,<5
+fastapi>=0.115,<1
+uvicorn>=0.30,<1
+python-multipart>=0.0.18,<1
